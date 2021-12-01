@@ -1,0 +1,139 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.75;
+    background-color: #121212;
+    background-image: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(255, 133, 0, 0.2) 0,
+            rgba(255, 132, 1, 0.1) 46.35%,
+            rgba(100, 6, 66, 0) 100%
+        ),
+        radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(255, 133, 0, 0.2) 0,
+            rgba(255, 132, 1, 0.1) 46.35%,
+            rgba(100, 6, 66, 0) 100%
+        ),
+        radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(255, 133, 0, 0.2) 0,
+            rgba(255, 132, 1, 0.1) 46.35%,
+            rgba(100, 6, 66, 0) 100%
+        );
+    background-size: 1392.3125rem 166.3125rem;
+    background-repeat: no-repeat;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.title-shadow {
+    text-shadow: 0 0 14px rgb(241 138 52 / 70%), 0 0 5.84887px rgb(241 138 52 / 71%),
+        0 0 3.12708px rgb(241 138 52 / 50%), 0 0 1.75302px rgb(241 138 52 / 50%), 0 0 0.931014px rgb(241 138 52 / 40%),
+        0 0 0.387416px rgb(241 138 52 / 28%);
+    line-height: 1.3;
+}
+
+
+
+.slick-active,
+.slick-slide {
+    transform: scale(0.5);
+    opacity: 30%;
+    transition: all .4s linear;
+}
+
+.slick-center  {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+
+.top-slider {
+    padding: 60px 0;
+    &__img {
+        width: 100%;
+    }
+}
+
+.info-product {
+    padding: 40px 0;
+    &__link {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &__item {
+        color: #fff;
+        position: relative;
+        font-size: 22px;
+        display: block;
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 12rem;
+            margin-left: -6rem;
+            top: 1.80rem;
+            left: 50%;
+            right: 50%;
+            height: 1.5px;
+            background: linear-gradient(88deg, #ff8401, #c8091e, #7627c7);
+            background-size: 100%;
+        }
+    }
+    &__left {
+        text-align: left;
+        align-self: flex-start;
+        width: 50%;
+    }
+    &__left-title,
+    &__right-title {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        letter-spacing: 10px;
+        margin-bottom: 40px;
+    }
+    &__right {
+        float: right;
+        width: 50%;
+    }
+    &__img {
+        width: 100%;
+        margin: 7rem 0;
+    }
+}
+
+@media (max-width: 1050px) {
+    .top-slider {
+        &__img {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+    .info-product{
+        &__box{
+            margin: 0 auto;
+            width: 32rem;
+            max-width: 35rem;
+        }
+        &__left,
+        &__right{
+            width: 100%;
+        }
+        &__left-title,
+        &__right-title{
+            font-size: 1.2rem;
+        }
+    }
+}
